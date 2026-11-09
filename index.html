@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bem-vindo a Clinica Serena">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
+    <script src="script.js" defer></script>
+    <title>Clinica Serena</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+
+                <a class="home" href="#">
+                    <img src="img/logo-icone.png" alt="logo da clínica">
+                </a>
+
+                <a class="home" href="#">Clínica Serena</a>
+            </div>
+
+            
+
+            <div class="menu-links" id="menu-links">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                </ul>
+
+                <a class="agendar" href="#agendamento">Agendar consulta</a>
+            </div>
+
+            <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+                <img src="img/icone-menu.png" alt="">
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="inicio">
+                <p class="titulo">Psicoterapia Presencial e Online</p>
+                <h1>Cuidar da mente começa com uma conversa.</h1>
+                <p class="conteudo">Atendimento psicológico acolhedor para adultos, adolescentes e crianças, com profissionais que escutam sem julgamento.</p>
+            
+            
+                <div class="botoes">
+                    <a  href="#agendamento">Agende sua consulta</a>
+                    <a  href="#servicos" id="botao-2">Conheça os serviços</a>
+                </div>
+            </div>
+
+            <img id="hero-desktop" src="img/hero-desktop.png" alt="imagem ilustrativa">
+            <img id="hero-mobile" src="img/hero-mobile.png" alt="imagem ilustrativa">
+        </section>
+
+        <section id="servicos" class="servicos">
+            <h2>Serviços</h2>
+            <p>Escolha o formato que faz mais sentido para o seu momento. Se tiver dúvida, a primeira conversa ajuda a decidir.</p>
+
+            <div class="terapia">
+                <article>
+                    <div class="icone">
+                        <img src="img/icone-individual.png" alt="icone individual">
+                    </div>
+                    
+                    <h3>Terapia individual</h3>
+                    <p>Espaço para entender emoções, padrões e escolhas, com sessões semanais ou quinzenais.</p>
+                </article>
+
+                <article>
+                    <div class="icone">
+                        <img src="img/icone-casal.png" alt="icone casal">
+                    </div>
+             
+                    <h3>Terapia de casal</h3>
+                    <p>Apoio para melhorar a comunicação e lidar com conflitos da relação.</p>
+                </article>
+
+                <article>
+                    <div class="icone">
+                        <img src="img/icone-online.png" alt="icone individual">
+                    </div>
+                    
+                    <h3>Atendimento online</h3>
+                    <p>Sessões por vídeo, com o mesmo cuidado do presencial, de onde você estiver.</p>
+                </article>
+            </div>
+
+        </section>
+
+        <section id="FAQ" class="FAQ">
+            <h2>Perguntas frequentes</h2>
+
+            <details open>
+                <summary>Como funciona a primeira consulta?</summary>
+                <p>É uma conversa inicial para conhecermos a sua história e entender o que você busca. Não há compromisso de continuidade.</p>
+            </details>
+            
+            <details>
+                <summary>Quanto tempo dura cada sessão?</summary>
+                <p>Em geral, 50 minutos. A frequência é combinada com o profissional, de acordo com a sua necessidade.</p>
+            </details>
+            
+            <details>
+                <summary>O atendimento online é seguro?</summary>
+                <p>Usamos plataformas de vídeo com criptografia e seguimos as mesmas regras de sigilo do atendimento presencial.</p>
+            </details>
+            
+            <details>
+                <summary>Preciso de encaminhamento médico?</summary>
+                <p>Não. Você pode solicitar o agendamento diretamente, pelo formulário desta página.</p>
+            </details>
+        </section>
+
+        <section id="agendamento" class="agendamento">
+            <div class="formulario-esquerda">
+                <h2>Solicite seu agendamento</h2>
+                <p id="p1">Preencha o formulário e entraremos em contato para combinar o melhor dia e horário. Resposta em até [PRAZO] dias úteis.</p>
+                <p>Não inclua informações clínicas neste formulário. Seus dados são usados apenas para o contato.</p>
+            </div>
+            
+            <form novalidate>
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" aria-describedby="erro-nome" required>
+                    <span class="erro" id="erro-nome"></span>
+                </div>
+
+                <div class="form2">
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="nome@email.com" aria-describedby="erro-email" required>
+                        <span class="erro" id="erro-email"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone com DDD</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(27) 90000-0000" aria-describedby="erro-telefone" required>
+                        <span class="erro" id="erro-telefone"></span>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <div id="check">
+                        <input id="botao-check" type="checkbox" aria-describedby="erro-consentimento" required>
+                        <p>Concordo com o uso dos meus dados para contato sobre o agendamento, conforme a <a href="#rodape">Política de Privacidade</a>.</p>
+                    </div>
+                    <span class="erro" id="erro-consentimento"></span>
+                </div>
+
+                <button id="solicitacao" type="submit">Solicitar agendamento</button>
+
+                <div class="confirmacao" id="confirmacao" role="status" hidden>Solicitação enviada! Entraremos em contato em breve.</div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="rodape" class="rodape">
+        <div class="rodape-principal">
+
+
+            <div class="rodape-conteudo">
+                <div class="clinica">
+
+                    <div id="serena">
+                        <img src="img/logo-icone-claro.png" alt="logo da clínica">
+                        <span>Clinica Serena</span>
+                    </div>
+
+                    <p>Este site não oferece atendimento de emergência. Em situação de crise, ligue 188 (CVV, 24 horas) ou 192 (SAMU).</p>
+                </div>
+                
+                
+                <div id="contato">
+                   <h2>Contato</h2>
+                    <address>
+                        <p>[ENDEREÇO DA CLÍNICA]</p>
+                        <p>[E-MAIL DE CONTATO]</p>
+                    </address>
+                    <p>Segunda a sexta, das 8h às 20h</p>
+                </div>
+                
+                <div id="info">
+                    <h2>Informações</h2>
+                    <a href="#rodape">Política de Privacidade</a>
+                    <a href="#">Voltar ao topo</a>
+                </div>
+            </div>
+
+
+            <div id="fim">
+
+                <p>© 2026 Clínica Serena. Nome e conteúdo fictícios, projeto acadêmico.</p>
+            </div>
+
+
+        </div>
+    </footer>
+</body>
+</html>
